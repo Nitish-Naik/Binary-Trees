@@ -143,45 +143,26 @@ public class BinaryTreeB {
         return leftSum + rightSum + root.data;
     }
 
-    // Diameter of a tree -> O(n*n) == number of nodes in the longest path between 2 leaves
-
-    // public static int diameter(Node root) {
-    //     if(root == null) {
-    //         return 0;
-    //     }
-
-    //     int leftDia = diameter(root.left);
-    //     int rightDia = diameter(root.right);
-
-    //     int maxDia = Math.max(leftDia+ rightDia) +1;
-    //     return Math.max(maxDia, leftDia);
-
-    // }
-
-
-
     public static void main(String[] args) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
 
-        // if (root != null) {
-        //     System.out.println("Preorder traversal:");
-        //     preorder(root);
-        //     System.out.println("\nPostorder traversal:");
-        //     postorder(root);
-        //     System.out.println("\nPostorder traversal:");
-        //     inorder(root);
-        // } else {
-        //     System.out.println("The tree is empty.");
-        // }
-
-        // System.out.println(height(root));
-        // levelTraversal(root);
-
-        // System.out.println(countNodes(root));
-        // System.out.println(sum_of_nodes(root));
+        if (root != null) {
+            System.out.println("Preorder traversal:");
+            preorder(root);
+            System.out.println("\nPostorder traversal:");
+            postorder(root);
+            System.out.println("\nPostorder traversal:");
+            inorder(root);
+        } else {
+            System.out.println("The tree is empty.");
+        }
+        System.out.println(height(root));
+        levelTraversal(root);
+        System.out.println(countNodes(root));
+        System.out.println(sum_of_nodes(root));
 
     }
 }
